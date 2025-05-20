@@ -17,6 +17,22 @@
                 left: 0;
                 margin: 0;
             }
+            .fadein{
+                opacity: 1;
+                animation-name: fadeIn;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: 1s;
+                animation-fill-mode: backwards;
+            }
+            @keyframes fadeIn{
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
             .cntr{
                 position: absolute;
                 top: 50%;
@@ -74,7 +90,7 @@
             }
             .flagbutton{
                 width: 90%;
-                height: 235px;
+                height: 250px;
                 border-radius: 10px;
                 margin-right: 10px;
                 display: block;
@@ -95,7 +111,7 @@
                 font-weight: bold;
             }
             .mainttle{
-                font-family: Verdana, sans-serif;
+                font-family: Georgia, 'Times New Roman', Times, serif;
                 font-size: 500%;
                 color:azure;
                 text-align: center;
@@ -103,18 +119,18 @@
             }
         </style>
     </head>
-    <body>
+    <body style="background-color: azure;">
         <div class="wrapper">
-            <section id="title" class="top">
+            <section id="title" class="top fadein" style="animation-delay: 0s;">
                 <div class="bg" style="background-image: url('images/classierflags_title_background.png'); height: 100%;"></div>
                 <p class="mainttle cntr" style="text-align: middle;">ClassierFlags401</p>
             </section>
-            <section id="abt" class="mid">
+            <section id="abt" class="mid fadein" style="animation-delay: 0.5s;">
                 <div>
                     <a class="abtbutton cntr" href="about.html">About</a>
                 </div>
             </section>
-            <section id="cart" class="low">
+            <section id="flags" class="low fadein" style="animation-delay: 0.7s;">
                 <div style="text-align: center;">
                     <div style="width: 30%; height: 10%; text-align: center; display: inline-block;">
                         <a href="classierchat401.html">
