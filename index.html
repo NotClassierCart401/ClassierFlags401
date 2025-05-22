@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device_width initial-scale=1.0">
-        <meta name="keywords" content="ClassierCart, Flags">
-        <meta name="description" content="...">
+        <meta name="keywords" content="ClassierCart, Flags ClassierFlags, ClassierFlags401">
+        <meta name="description" content="ClassierFlags401 is a site about in-game nations that I have had something to do with.">
         <title>ClassierFlags401</title>
-        <link rel="icon" type="image/x-icon" href="images/classierflags401.ico">
+        <link rel="icon" type="image/x-icon" href="images/classierflags401.ico" sizes="any">
         <style>
             *{
                 box-sizing: border-box;
@@ -42,7 +42,6 @@
             .wrapper{
                 width: 100%;
                 height: 100%;
-
             }
             .screenwh{
                 width: 100%;
@@ -70,26 +69,25 @@
                 height: 20%;
                 top: 0;
                 left: 0;
-                position:relative
+                position: relative
             }
             .low{
                 width: 100%;
                 height: 100%;
                 top: 0;
                 left: 0;
-                position:relative
+                position: relative
             }
             .bg{
                 width: 100%;
-                height: 30%;
+                height: 100%;
                 position: relative;
                 background-size: cover;
-                top: 0;
-                left: 0;
+                background-position: center center;
                 z-index: -10;
             }
             .flagbutton{
-                width: 90%;
+                width: 400px;
                 height: 250px;
                 border-radius: 10px;
                 margin-right: 10px;
@@ -107,22 +105,37 @@
                 padding:1% 30%;
                 text-decoration: none;
             }
-            .username {
-                font-weight: bold;
-            }
             .mainttle{
                 font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 500%;
+                font-size: 5vw;
                 color:azure;
                 text-align: center;
                 margin: auto;
+                position: absolute;
+            }
+            .flagdiv{
+                text-align: center;
+            }
+            @media screen and (min-width: 1400px) {
+                .flagdiv {
+                    display: inline-block;
+                    width: 30%;
+                    height: 10%;
+                }
+            }
+            @media screen and (max-width: 1399px) {
+                .flagdiv {
+                    position: relative;
+                    margin: auto;
+
+                }
             }
         </style>
     </head>
     <body style="background-color: azure;">
         <div class="wrapper">
             <section id="title" class="top fadein" style="animation-delay: 0s;">
-                <div class="bg" style="background-image: url('images/classierflags_title_background.png'); height: 100%;"></div>
+                <div class="bg cntr" style="background-image: url('images/classierflags_title_background.png');"></div>
                 <p class="mainttle cntr" style="text-align: middle;">ClassierFlags401</p>
             </section>
             <section id="abt" class="mid fadein" style="animation-delay: 0.5s;">
@@ -132,7 +145,7 @@
             </section>
             <section id="flags" class="low fadein" style="animation-delay: 0.7s;">
                 <div style="text-align: center;">
-                    <div style="width: 30%; height: 10%; text-align: center; display: inline-block;">
+                    <div class="flagdiv">
                         <a href="classierchat401.html">
                             <img class="flagbutton" src="images/AN State Flag.png" alt="classiercart401-flag.png">
                         </a>
@@ -140,7 +153,7 @@
                             <a href="classierchat401.html">ClassierChat401</a>
                         </p>
                     </div>
-                    <div style="width: 30%; height: 10%; text-align: center; display: inline-block;">
+                    <div class="flagdiv">
                         <a href="center_grounds_alliance.html">
                             <img class="flagbutton" src="images/CGA_old_flag.png" alt="classiercart401-flag.png">
                         </a>
@@ -148,7 +161,7 @@
                             <a href="center_grounds_alliance.html">Center Grounds Alliance (CGA)</a>
                         </p>
                     </div>
-                    <div style="width: 30%; height: 10%; text-align: center; display: inline-block;">
+                    <div class="flagdiv">
                         <a href="free_republic_of_donkk.html">
                             <img class="flagbutton" src="images/Flag Of The Free Republic Of Donkk.png" alt="classiercart401-flag.png">
                         </a>
@@ -158,7 +171,7 @@
                     </div>
                 </div>
                 <div style="text-align: center;">
-                    <div style="width: 30%; height: 10%; text-align: center; display: inline-block;">
+                    <div class="flagdiv">
                         <a href="democratic_union_of_valkyrie.html">
                             <img class="flagbutton" src="images/flag_democratic_union_of_valkyrie.png" alt="classiercart401-flag.png">
                         </a>
@@ -166,7 +179,7 @@
                             <a href="democratic_union_of_valkyrie.html">Democratic Union of Valkyie</a>
                         </p>
                     </div>
-                    <div style="width: 30%; height: 10%; text-align: center; display: inline-block;">
+                    <div class="flagdiv">
                         <a href="midgard_mariners.html">
                             <img class="flagbutton" src="images/flag_midgard_mariners.jpg" alt="classiercart401-flag.png">
                         </a>
@@ -174,7 +187,7 @@
                             <a href="midgard_mariners.html">Midgard Mariners</a>
                         </p>
                     </div>
-                                        <div style="width: 30%; height: 10%; text-align: center; display: inline-block;">
+                    <div class="flagdiv">
                         <a href="united_factions.html">
                             <img class="flagbutton" src="images/flag_uf.png" alt="classiercart401-flag.png">
                         </a>
