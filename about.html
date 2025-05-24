@@ -17,6 +17,22 @@
                 left: 0;
                 margin: 0;
             }
+            .fadein{
+                opacity: 1;
+                animation-name: fadeIn;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: 1s;
+                animation-fill-mode: backwards;
+            }
+            @keyframes fadeIn{
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
             .cntr{
                 position: absolute;
                 top: 50%;
@@ -68,8 +84,12 @@
                 cursor:pointer;
                 align-content: center;
                 border-radius: 10px;
-                padding: 1% 30%;
+                padding: 0.5% 1%;
                 text-decoration: none;
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translate(0%, -50%);
             }
             .mainttle{
                 font-family: Verdana, sans-serif;
@@ -83,20 +103,17 @@
     </head>
     <body>
         <div class="wrapper">
-            <section id="title" class="top" style="background-color: white;">
+            <section id="title" class="top fadein" style="background-color: white;">
                 <div class="bg" style="width: 100%; height: 100%">
-                    <div style="background-color: white; top: 0; left: 0;"></div>
-                    <h1 class="mainttle cntr">About</h1>
+                    <div style="background-color: white; top: 0; left: 0;">
+                        <h1 class="mainttle cntr">About</h1>
+                        <a class="abtbutton" href="index.html">Home Page</a>
+                    </div>
                 </div>
             </section>
-            <section id="main">
+            <section id="main" class="mid fadein" style="animation-delay: 0.5s;">
                 <div class="mid">
                     <p style="font-size: large;">ClassierFlags401 is a site with information about in-game-nations that I have either made, been a part of, or whos leader wants their nation listed here. Nothing has been implemented past this page and the home page at this point</p>
-                </div>
-            </section>
-            <section>
-                <div class="low">
-                    <a href="index.html">Home Page</a>
                 </div>
             </section>
         </div>

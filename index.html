@@ -114,28 +114,12 @@
                 position: absolute;
             }
             .flagdiv{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-evenly;
                 text-align: center;
             }
-            @media screen and (min-width: 1400px) {
-                .flagdiv {
-                    display: inline-block;
-                    width: 30%;
-                    height: 10%;
-                }
-            }
-            @media screen and (max-width: 1399px) {
-                .flagdiv {
-                    position: relative;
-                    margin: auto;
-                }
-                .flagbutton {
-                    width: 300px;
-                    height: 187.5px;
-                }
-                .mainttle {
-                    font-size: 10vw;
-                }
-            }
+            
         </style>
     </head>
     <body style="background-color: azure;">
@@ -150,8 +134,8 @@
                 </div>
             </section>
             <section id="flags" class="low fadein" style="animation-delay: 0.7s;">
-                <div style="text-align: center;">
-                    <div class="flagdiv">
+                <div class="flagdiv">
+                    <div>
                         <a href="classierchat401.html">
                             <img class="flagbutton" src="images/AN State Flag.png" alt="classiercart401-flag.png">
                         </a>
@@ -159,7 +143,7 @@
                             <a href="classierchat401.html">ClassierChat401</a>
                         </p>
                     </div>
-                    <div class="flagdiv">
+                    <div>
                         <a href="center_grounds_alliance.html">
                             <img class="flagbutton" src="images/CGA_old_flag.png" alt="classiercart401-flag.png">
                         </a>
@@ -167,7 +151,7 @@
                             <a href="center_grounds_alliance.html">Center Grounds Alliance (CGA)</a>
                         </p>
                     </div>
-                    <div class="flagdiv">
+                    <div>
                         <a href="free_republic_of_donkk.html">
                             <img class="flagbutton" src="images/Flag Of The Free Republic Of Donkk.png" alt="classiercart401-flag.png">
                         </a>
@@ -175,9 +159,7 @@
                             <a href="free_republic_of_donkk.html">Free Republic of Donkk (FRD)</a>
                         </p>
                     </div>
-                </div>
-                <div style="text-align: center;">
-                    <div class="flagdiv">
+                    <div>
                         <a href="democratic_union_of_valkyrie.html">
                             <img class="flagbutton" src="images/flag_democratic_union_of_valkyrie.png" alt="classiercart401-flag.png">
                         </a>
@@ -185,7 +167,7 @@
                             <a href="democratic_union_of_valkyrie.html">Democratic Union of Valkyie</a>
                         </p>
                     </div>
-                    <div class="flagdiv">
+                    <div>
                         <a href="midgard_mariners.html">
                             <img class="flagbutton" src="images/flag_midgard_mariners.jpg" alt="classiercart401-flag.png">
                         </a>
@@ -193,7 +175,7 @@
                             <a href="midgard_mariners.html">Midgard Mariners</a>
                         </p>
                     </div>
-                    <div class="flagdiv">
+                    <div>
                         <a href="united_factions.html">
                             <img class="flagbutton" src="images/flag_uf.png" alt="classiercart401-flag.png">
                         </a>
