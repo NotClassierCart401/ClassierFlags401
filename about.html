@@ -78,8 +78,8 @@
                 left: 0;
                 position:relative
             }
-            .abtbutton{
-                background-color: black;
+            .homebutton{
+                background-color: rgb(77, 77, 77);
                 color: white;
                 cursor:pointer;
                 align-content: center;
@@ -90,6 +90,12 @@
                 top: 50%;
                 left: 10px;
                 transform: translate(0%, -50%);
+                transition: 0.5s ease-in-out;
+            }
+            .homebutton:hover{
+                background-color: black;
+                transform: translate(0%, -50%) scale(1.1);
+                transform-origin: center;
             }
             .mainttle{
                 font-family: Verdana, sans-serif;
@@ -99,6 +105,11 @@
                 margin: auto;
                 display: block;
             }
+            .desc{
+                font-size: large;
+                margin-left: 50px;
+                margin-right: 50px;
+            }
         </style>
     </head>
     <body>
@@ -107,13 +118,13 @@
                 <div class="bg" style="width: 100%; height: 100%">
                     <div style="background-color: white; top: 0; left: 0;">
                         <h1 class="mainttle cntr">About</h1>
-                        <a class="abtbutton" href="index.html">Home Page</a>
+                        <a class="homebutton" href="index.html">Home Page</a>
                     </div>
                 </div>
             </section>
             <section id="main" class="mid fadein" style="animation-delay: 0.5s;">
                 <div class="mid">
-                    <p style="font-size: large;">ClassierFlags401 is a site with information about in-game-nations that I have either made, been a part of, or whos leader wants their nation listed here. Nothing has been implemented past this page and the home page at this point</p>
+                    <p class="desc">ClassierFlags401 is a site with information about in-game-nations that I have either made, been a part of, or whos leader wants their nation listed here. Nothing has been implemented past this page and the home page at this point</p>
                 </div>
             </section>
         </div>

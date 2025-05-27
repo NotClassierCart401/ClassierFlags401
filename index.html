@@ -37,7 +37,7 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%) scale(1);
             }
             .wrapper{
                 width: 100%;
@@ -69,14 +69,14 @@
                 height: 20%;
                 top: 0;
                 left: 0;
-                position: relative
+                position: relative;
             }
             .low{
                 width: 100%;
                 height: 100%;
                 top: 0;
                 left: 0;
-                position: relative
+                position: relative;
             }
             .bg{
                 width: 100%;
@@ -88,22 +88,34 @@
             }
             .flagbutton{
                 width: 400px;
-                height: 250px;
+                height: 75%;
                 border-radius: 10px;
                 margin-right: 10px;
                 display: block;
                 position: relative;
                 margin: auto;
                 display: inline-block;
+                transition: 0.2s ease-in-out;
+            }
+            .flagbutton:hover{
+                transform: scale(1.05);
+                transform-origin: center;
             }
             .abtbutton{
-                background-color: black;
+                background-color: rgb(77, 77, 77);
                 color: white;
                 cursor:pointer;
-                align-content: center;
+                text-align: center;
                 border-radius: 10px;
                 padding:1% 30%;
                 text-decoration: none;
+                transition: 0.5s ease-in-out;
+                white-space: nowrap;
+            }
+            .abtbutton:hover{
+                background-color: black;
+                transform: translate(-50%, -50%) scale(1.2);
+                transform-origin: center;
             }
             .mainttle{
                 font-family: Georgia, 'Times New Roman', Times, serif;
@@ -119,7 +131,15 @@
                 justify-content: space-evenly;
                 text-align: center;
             }
-            
+            @media screen and (max-width: 1199px) {
+                .flagbutton {
+                    width: 300px;
+                    height: 200px;
+                }
+                .mainttle {
+                    font-size: 300%;
+                }
+            }            
         </style>
     </head>
     <body style="background-color: azure;">
@@ -183,6 +203,9 @@
                             <a href="united_factions.html">United Factions (UF)</a>
                         </p>
                     </div>
+                </div>
+                <div style="height: 100px;">
+
                 </div>
             </section>
         </div>
