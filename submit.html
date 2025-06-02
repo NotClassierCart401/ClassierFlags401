@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device_width initial-scale=1.0">
+        <meta name="keywords" content="ClassierCart, Flags">
+        <meta name="description" content="...">
+        <title>Submit a Nation</title>
+        <link rel="icon" type="image/x-icon" href="images/classierflags401.ico">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            html,body{
+                height:100%;
+                top: 0;
+                left: 0;
+                margin: 0;
+            }
+            .fadein{
+                opacity: 1;
+                animation-name: fadeIn;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: 1s;
+                animation-fill-mode: backwards;
+            }
+            @keyframes fadeIn{
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            .cntr{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .wrapper{
+                width: 100%;
+                height: 100%;
+
+            }
+            .screenwh{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+            .bg{
+                box-shadow: 5px 5px 15px lightgray;
+            }
+            .top{
+                width: 100%;
+                height: 70px;
+                top: 0;
+                left: 0;
+                position: relative;
+                margin: 0;
+            }
+            .mid{
+                width: 100%;
+                height: 20%;
+                top: 0;
+                left: 0;
+                position:relative
+            }
+            .low{
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position:relative
+            }
+            .homebutton{
+                background-color: rgb(77, 77, 77);
+                color: white;
+                cursor:pointer;
+                align-content: center;
+                border-radius: 10px;
+                padding: 0.5% 1%;
+                text-decoration: none;
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translate(0%, -50%);
+                transition: 0.5s ease-in-out;
+            }
+            .homebutton:hover{
+                background-color: black;
+                transform: translate(0%, -50%) scale(1.1);
+                transform-origin: center;
+            }
+            .mainttle{
+                font-family: Verdana, sans-serif;
+                font-size: 350%;
+                color:black;
+                text-align: center;
+                margin: auto;
+                display: block;
+            }
+            @media screen and (max-width: 1050px) {
+                .mainttle {
+                    font-size: 150%;
+                }
+            }
+            #sanform{
+                width: 70%;
+                margin: auto;
+            }
+            #nationdesc{
+                width: 200px;
+                height: 20px;
+            }
+            #submittedflags{
+                width: 29%;
+                border: 1px solid black;
+            }
+            img{
+                width: 100%;
+            }
+            figcaption{
+                text-align: center;
+            }
+            input[type="file"]{
+                display: none;
+            }
+            label[for="nationflags"]{
+                background-color: blue;
+                color: white;
+                border-radius: 20px;
+                padding: 10.7%;
+                padding-bottom: 15px;
+                padding-top: 15px;
+                transition: 0.5s ease-in-out;
+            }
+            label[for="nationflags"]:hover{
+                background-color: darkblue;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <section id="title" class="top fadein" style="background-color: white;">
+                <div class="bg" style="width: 100%; height: 100%">
+                    <div style="background-color: white; top: 0; left: 0;">
+                        <h1 class="mainttle cntr">Submit a Nation</h1>
+                        <a class="homebutton" href="index.html">Home Page</a>
+                    </div>
+                </div>
+            </section>
+            <section id="main" class="mid fadein" style="animation-delay: 0.5s;">
+                <div class="mid">
+                    <form action="https://formspree.io/f/xyzjygle" id="sanform" name="nationsubmissions" method="POST" enctype="multipart/form-data">
+                        <fieldset>
+                            <legend>Submit a nation to be listed in ClassierFlags</legend>
+                            <label for="nationname">Name of Nation</label><br>
+                            <input type="text" id="nationname" name="nationname" value=""><br><br>
+                            <label for="nationdesc">The description of your nation</label><br>
+                            <textarea id="nationdesc" name="nationdesc"></textarea><br>
+                            <p>Flags of your nation. Make sure to name the files according to their purpose as this is how they will be organized. (ie. classier_naval_flag.png)</p><br>
+                            <label for="nationflags">Chose Files</label>
+                            <input accept="image/*" type="file" id="nationflags" name="nationflags" onchange="imgpreview()" multiple><br><br>
+                            <div id="submittedflags"></div><br><br>
+                            <input type="submit" value="Submit">
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <script src="submit.js"></script>
+    </body>
+</html>
