@@ -22,30 +22,21 @@ function imgpreview() {
 document.getElementById("sanform").addEventListener("submit", async function(event) {
     event.preventDefault();
 
+    let formData = new FormData();
+
     for (file of flagfiles.files) {
-        let reader = new FileReader();
+        formData.append("file", file, file.name);
+    }
+    try {
+        console.log("Sending request...");
+        let response = await fetch("https://script.google.com/macros/s/AKfycbzlJhH85ToqMKnWCX56Sq-RVzJxbNN4E9FZK0gL1kRF8jQDBxzrMVf8h9goXr6sptou/exec", {
+          method: "POST",
+          body: formData
+        });
 
-        reader.onloadend = async function() {
-            try {
-                console.log("Sending request...");
-                let response = await fetch("https://script.google.com/macros/s/AKfycbzlJhH85ToqMKnWCX56Sq-RVzJxbNN4E9FZK0gL1kRF8jQDBxzrMVf8h9goXr6sptou/exec", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    mode: "cors",
-                    body: JSON.stringify({
-                        file: reader.result.split(",")[1],
-                        filename: file.name,
-                        filetype: file.type
-                    })
-                });
-
-                let data = await response.json();
-                console.log("Response:", data);
-            } catch (error) {
-                console.error("Fetch Error:", error);
-            }
-        };
-
-        reader.readAsDataURL(file);
-    };
+        let data = await response.json();
+        console.log("Response:", data);
+    }     catch (error) {
+        console.error("Fetch Error:", error);
+    }
 });
