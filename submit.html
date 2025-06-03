@@ -113,6 +113,7 @@
             #sanform{
                 width: 70%;
                 margin: auto;
+                margin-top: 20px;
             }
             #nationdesc{
                 width: 200px;
@@ -163,8 +164,12 @@
                             <legend>Submit a nation to be listed in ClassierFlags</legend>
                             <label for="nationname">Name of Nation</label><br>
                             <input type="text" id="nationname" name="nationname" value=""><br><br>
+                            <label for="nationleader">Leader of the Nation  (Include if they are a president, military dictator, etc.)</label><br>
+                            <input type="text" id="nationleader" name="nationleader" value=""><br><br>
                             <label for="nationdesc">The description of your nation</label><br>
-                            <textarea id="nationdesc" name="nationdesc"></textarea><br>
+                            <textarea id="nationdesc" name="nationdesc"></textarea><br><br>
+                            <label for="nationlinks">Put any links to leader accounts, nation join links, or any other links here</label><br>
+                            <input type="text" id="nationlinks" name="nationlinks" value=""><br><br>
                             <p>Flags of your nation. Make sure to name the files according to their purpose as this is how they will be organized. (ie. classier_naval_flag.png)</p><br>
                             <label for="nationflags">Chose Files</label>
                             <input accept="image/*" type="file" id="nationflags" name="file" onchange="imgpreview()" multiple><br><br>

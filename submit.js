@@ -23,10 +23,12 @@ document.getElementById("sanform").addEventListener("submit", async function(eve
     event.preventDefault();
 
     let nationname = document.getElementById("nationname").value;
+    let nationleader = document.getElementById("nationleader").value;
     let nationdesc = document.getElementById("nationdesc").value;
+    let nationlinks = document.getElementById("nationlinks").value;
     let flagfiles = document.getElementById("nationflags");
 
-    let nationdatatxt = `Nation Name: ${nationname}\nNation Description: ${nationdesc}`;
+    let nationdatatxt = `Nation Name: ${nationname}\nNation Leader: ${nationleader}\nNation Description: ${nationdesc}\nNation Links: ${nationlinks}`;
   let filesArray = [];
   
   // Process each file and convert it to Base64.
