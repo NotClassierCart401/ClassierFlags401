@@ -5,7 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Free Republic of Donkk (FRD)</title>
         <link rel="icon" type="image/x-icon" href="images/classierflags401.ico">
+         <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
         <style>
+            .ancientfont{
+                font-family: 'Cinzel', serif;
+            }
             *{
                 box-sizing: border-box;
             }
@@ -14,6 +18,7 @@
                 top: 0;
                 left: 0;
                 margin: 0;
+                background-color: rgb(203, 190, 172);
             }
             .fadein{
                 opacity: 1;
@@ -51,9 +56,6 @@
                 right: 0;
                 bottom: 0;
             }
-            .bg{
-                box-shadow: 5px 5px 15px lightgray;
-            }
             .top{
                 width: 100%;
                 height: 20%;
@@ -61,18 +63,23 @@
                 left: 0;
                 position: relative;
                 margin: 0;
+                box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
             }
             .mid{
                 width: 100%;
                 top: 0;
                 left: 0;
+                box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
             }
             .low{
                 width: 100%;
-                height: 100%;
                 top: 0;
                 left: 0;
-                position: relative
+                position: relative;
+                border-left: 20vw solid rgba(109, 83, 57, 0.5);
+                border-right: 20vw solid rgb(109, 83, 57, 0.5);
+                background-color: rgb(74, 56, 32, 0.5);
+                color: rgb(75, 65, 56);
             }
             .homebutton{
                 background-color: rgb(77, 77, 77);
@@ -91,11 +98,16 @@
                 transform-origin: center;
             }
             .mainttle{
-                font-family: Verdana, sans-serif;
                 font-size: 350%;
                 color:black;
                 text-align: center;
                 margin: auto;
+            }
+            .flagdiv{
+                margin: 50px;
+                margin-bottom: 20px;
+                text-align: center;
+                display: inline-block;
             }
             .flag{
                 display: block;
@@ -103,10 +115,23 @@
                 width: 50%;
                 left: 50%;
                 transform: translate(-50%);
+                box-shadow: 0px 0px 50px rgb(81, 63, 38);
             }
             .flagtxt{
                 font-size: 200%;
                 margin: auto;
+                margin-top: 10px;
+            }
+            .nationdesc{
+                margin: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                z-index: -10;
+                font-size: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                display: inline-block;
+                font-weight: 500;
+                font-style: oblique;
             }
             @media screen and (min-width: 1400px) {
 
@@ -125,7 +150,7 @@
         </style>
     </head>
     <body>
-        <div class="wrapper">
+        <div class="wrapper ancientfont">
             <section id="top" class="top fadein" style="animation-delay: 0s;">
                 <div>
                     <div>
@@ -138,34 +163,35 @@
             </section>
             <section id="mid" class="mid fadein" style="animation-delay: 1s;">
                 <div>
-                    <div style="margin: 50px; text-align: center;">
+                    <div class="flagdiv">
                         <img class="flag" src="images/Flag Of The Free Republic Of Donkk.png" alt="free_republic_of_donkk_flag.png">
-                        <p class="flagtxt">Normal Flag</p>
+                        <p class="flagtxt">National Flag</p>
                     </div>
-                    <div style="margin: 50px; text-align: center;">
-                        <img class="flag" src="images/War Flag Of The Free Republic Of Donkk.png" alt="free_republic_of_donkk_war_flag.png">
+                    <div class="flagdiv">
+                        <img class="flag" src="images/War Flag Of The Free Republic Of Donkk.png" alt="free_republic_of_donkk_air_force.png">
                         <p class="flagtxt">War Flag</p>
                     </div>
-                    <div style="margin: 50px; text-align: center;">
-                        <img class="flag" src="images/Army Flag Of The Free Republic Of Donkk.png" alt="free_republic_of_donkk_army_flag.png">
+                    <div class="flagdiv">
+                        <img class="flag" src="images/Army Flag Of The Free Republic Of Donkk.png" alt="free_republic_of_donkk_war_flag.png">
                         <p class="flagtxt">Army Flag</p>
                     </div>
-                    <div style="margin: 50px; text-align: center;">
-                        <img class="flag" src="images/Naval Flag Of The Free Republic Of Donkk.png" alt="free_republic_of_donkk_naval_flag.png">
+                    <div class="flagdiv">
+                        <img class="flag" src="images/Naval Flag Of The Free Republic Of Donkk.png" alt="free_republic_of_donkk_army_flag.png">
                         <p class="flagtxt">Naval Flag</p>
                     </div>
-                    <div style="margin: 50px; text-align: center;">
-                        <img class="flag" src="images/Air Force Flag Of The Free Republic Of Donkk.png" alt="free_republic_of_donkk_air_force.png">
+                    <div class="flagdiv">
+                        <img class="flag" src="images/Air Force Flag Of The Free Republic Of Donkk.png" alt="free_republic_of_donkk_naval_flag.png">
                         <p class="flagtxt">Air Force Flag</p>
                     </div>
+
                 </div>
             </section>
             <section id="low" class="low fadein" style="animation-delay: 2s;">
                 <div>
-                    <p>The Free Republic of Donkk (FRD) is a faction server within the game Stormworks: Build and Rescue based on the island of Donkk. They are a thriving server built on the values of democracy and freedom. They participate in and/or host events involving battles, rallies, and more.</p>
-                    <p style="margin-bottom: 0;">Quote and description from the President of the FRD, <a href="https://steamcommunity.com/profiles/76561199072785254/" target="_blank">Bjorn</a>:</p>
-                    <p style="margin: 0; margin-left: 20px;">"When the short-lived Republic of Donkk molted it skin, a freer form of itself was birthed. For the first time in one hundred twenty-two years, the workers, farmers, miners, wives, and soldiers of the island of Donkk could rest on their laurels, and place their liberties in a newfound cradle of freedom.<br><br>
-                        NA/EU/AS/OC<br><br>
+                    <p class="nationdesc">The Free Republic of Donkk (FRD) is a faction server within the game Stormworks: Build and Rescue based on the island of Donkk. They are a thriving server built on the values of democracy and freedom. They participate in and/or host events involving battles, rallies, and more.<br><br><br>
+                    Quote and description from the President of the FRD, <a href="https://steamcommunity.com/profiles/76561199072785254/" target="_blank">Bjorn</a>:</p>
+                    <p style="margin: 0; margin-left: 20px;">"When the short-lived Republic of Donkk molted it skin, a freer form of itself was birthed. For the first time in one hundred twenty-two years, the workers, farmers, miners, wives, and soldiers of the island of Donkk could rest on their laurels, and place their liberties in a newfound cradle of freedom."<br><br></p>
+                    <p class="nationdesc" style="margin: 0; margin-left: 20px;">    NA/EU/AS/OC<br><br>
                         📌 INFORMATION,<br>
                         The Free Republic of Donkk, abbreviated "F.R.D.," is a Presidential Republic founded July 22nd, 2024. It is complete with an armed Navy, Air Force, Army and Coastguard.<br><br>
                         Trainings, internals, battles, raids, and more are frequently hosted within our ranks. We offer a challenging and entertaining promotion system, complete with many branch-exclusive ranks to rise through.<br><br>
